@@ -1,0 +1,15 @@
+{% extends "dta/tabs.html" %}
+
+    {%  block transfer %}
+        &nbsp;
+        &nbsp;&nbsp;<h4>Transfer Extract</h4>
+        <form method="post" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-info" value="Transfer">
+        </form>
+    {% endblock %}
+
+  {%  block lineage %}
+        &nbsp;&nbsp;<h4>Select an Extract</h4>
+    {% endblock %}
